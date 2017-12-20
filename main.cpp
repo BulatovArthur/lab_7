@@ -14,24 +14,22 @@ int main()
 	Node *first = new Node{str, nullptr}; 
 	Node *last = nullptr; 
 	while (true)
-  { 
+  	{ 
 		cin >> str; 
 		if (str == "end") break; 
 		Node *curr = new Node{str, nullptr}; 
 		if (first -> next == nullptr) first -> next = curr; 
-		if (last != nullptr)
-    { 
+		if (last != nullptr) 
 			last->next = curr; 
-		}
 		last = curr; 
 	}
 	Node *curr = nullptr; 
 	curr = first; 
 	do
-  { 
+	{ 
 		cout << curr -> str << endl; 
 		curr = curr -> next;
 	}
 	while (curr != nullptr);
-  return 0;
+	return 0;
 }
